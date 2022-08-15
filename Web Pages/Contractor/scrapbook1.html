@@ -1,0 +1,454 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="en-us">
+
+<!-- #BeginEditable "doctitle" -->
+<title>The Contractor Photo Album</title>
+<!-- #EndEditable -->
+
+<LINK REL=StyleSheet HREF='thesims.css' TYPE='text/css'>
+
+<style type="text/css">
+<!--
+#NavBar             {position:absolute}
+#NavBarNoHouse       {position:absolute}
+-->
+</style>
+
+<script language='Javascript'>
+<!--
+
+familyoff = new Image();
+familyoff.src = "family_a.jpg";
+familyon = new Image();
+familyon.src = "family_c.jpg";
+
+houseoff = new Image();
+houseoff.src = "house_a.jpg";
+houseon = new Image();
+houseon.src = "house_c.jpg";
+
+photooff = new Image();
+photooff.src = "photo_a.jpg";
+photoon = new Image();
+photoon.src = "photo_c.jpg";
+
+function popwin(URL, Name, Props, thisWin)
+{
+	var newwin = open(URL, Name, Props);
+}
+
+function mp_ImgRollOn(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "on.src;");
+        }
+        else if (document.all)
+        {
+	        //document[imgName].src = eval(imgName + "on.src");
+	        eval(layerid + ".all['" + imgName + "'].src = " + imgName + "on.src");
+        }
+
+}
+
+function mp_ImgRollOff(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "off.src;");
+        }
+        else if (document.all)
+        {
+		//document[imgName].src = eval(imgName + "off.src");
+	        eval(layerid + ".all['" + imgName + "'].src = " + imgName + "off.src");
+        }
+
+}
+
+function mp_showLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'show';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'visible';");
+        }
+}
+
+function CheckHouse()
+{
+        if (0)
+                mp_showLayer('NavBar');
+        else
+                mp_showLayer('NavBarNoHouse');
+
+
+}
+
+//-->
+</script>
+</head>
+
+<body onload="CheckHouse()">
+
+<div id="NavBar" style="position:absolute; left:0px; top:0px; width:150px; height:600px; z-index:1; visibility:hidden" visibility="hide">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><a href="familyhome.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','family')"
+		onmouseout	= "mp_ImgRollOff('NavBar','family')">
+		<IMG SRC="family_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></a></TD></TR>
+	<TR><TD><a href="house.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','house')"
+		onmouseout	= "mp_ImgRollOff('NavBar','house')">
+		<IMG SRC="house_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="house"></a></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+ 		onmouseover	= "mp_ImgRollOn('NavBar','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBar','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+<div id="NavBarNoHouse" style="position:absolute; left:0px; top:0px; width:150px; height:600px; z-index:1; visibility:hidden" visibility="hide">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><a href="familyhome.html"
+		onmouseover	= "mp_ImgRollOn('NavBarNoHouse','family')"
+		onmouseout	= "mp_ImgRollOff('NavBarNoHouse','family')">
+		<IMG SRC="family_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></a></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+ 		onmouseover	= "mp_ImgRollOn('NavBarNoHouse','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBarNoHouse','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+<div style="position:absolute; left:125px; top:0px;">
+
+<table cellpadding="0" cellspacing="0" border="0" width="450">
+	<tr width="450" align="center">
+		<td><img src="familyphotoalbumtxt.jpg" width="449" height="39" border="0"><img src="border39.gif" width="1" height="39" border="0"></td>
+	</tr>
+	<tr width="450" align="center">
+		<td>
+			<table bgcolor="#3666b4" width="450" cellpadding="0" cellspacing="0" border="0">
+				<tr width="448" align="center">
+					<td>
+						<table width="448" bgcolor="#EEEEDD" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td colspan="3"><img src="onepixel.gif" width="10" height="12" border="0"></td>
+							</tr>
+									<tr>
+										<td><img src="onepixel.gif" width="10" border="0"></td>
+										<td valign="top" align="center" bgcolor="#EEEEDD">
+<!-- Insert content here -->
+<table cellpadding="5" cellspacing="0" border="0" bgcolor="#EEEEDD">
+	<tr>
+		<td valign="top" align="center">
+		<font face="Arial,Helvetica,sans-serif" size="3" color="#113399"><b>Contractor</b></font></td>
+	</tr>
+</table>
+
+<br>
+
+<table cellpadding="5" cellspacing="0" border="0" bgcolor="#EEEEDD">
+
+<script>
+
+// preset captions
+c1="";
+c2="";
+c3="";
+c4="";
+c5="";
+c6="";
+c7="";
+c8="";
+c9="";
+c10="";
+c11="";
+c12="";
+c13="";
+c14="";
+c15="";
+c16="";
+c17="";
+c18="";
+c19="";
+c20="";
+c21="";
+c22="";
+c23="";
+c24="";
+c25="";
+c26="";
+c27="";
+c28="";
+c29="";
+c30="";
+c31="";
+c32="";
+c33="";
+c34="";
+c35="";
+c36="";
+c37="";
+c38="";
+c39="";
+c40="";
+c41="";
+c42="";
+c43="";
+c44="";
+c45="";
+c46="";
+c47="";
+c48="";
+c49="";
+c50="";
+c51="";
+c52="";
+c53="";
+c54="";
+c55="";
+c56="";
+c57="";
+c58="";
+c59="";
+c60="";
+c61="";
+c62="";
+c63="";
+c64="";
+c65="";
+c66="";
+c67="";
+c68="";
+c69="";
+c70="";
+c71="";
+c72="";
+c73="";
+c74="";
+c75="";
+c76="";
+c77="";
+c78="";
+c79="";
+c80="";
+c81="";
+c82="";
+c83="";
+c84="";
+c85="";
+c86="";
+c87="";
+c88="";
+c89="";
+c90="";
+c91="";
+c92="";
+c93="";
+c94="";
+c95="";
+c96="";
+c97="";
+c98="";
+c99="";
+c100="";
+c101="";
+c102="";
+c103="";
+c104="";
+c105="";
+c106="";
+c107="";
+c108="";
+c109="";
+c110="";
+c111="";
+c112="";
+c113="";
+c114="";
+c115="";
+c116="";
+c117="";
+c118="";
+c119="";
+c120="";
+c121="";
+c122="";
+c123="";
+c124="";
+c125="";
+c126="";
+c127="";
+c128="";
+c129="";
+c130="";
+c131="";
+c132="";
+c133="";
+c134="";
+c135="";
+c136="";
+c137="";
+c138="";
+c139="";
+c140="";
+c141="";
+c142="";
+c143="";
+c144="";
+c145="";
+c146="";
+c147="";
+c148="";
+c149="";
+c150="";
+c151="";
+c152="";
+c153="";
+c154="";
+c155="";
+c156="";
+c157="";
+c158="";
+c159="";
+c160="";
+c161="";
+c162="";
+c163="";
+c164="";
+c165="";
+c166="";
+c167="";
+c168="";
+c169="";
+c170="";
+c171="";
+c172="";
+c173="";
+c174="";
+c175="";
+c176="";
+c177="";
+c178="";
+c179="";
+c180="";
+c181="";
+c182="";
+c183="";
+c184="";
+c185="";
+c186="";
+c187="";
+c188="";
+c189="";
+c190="";
+c191="";
+c192="";
+c193="";
+c194="";
+c195="";
+c196="";
+c197="";
+c198="";
+c199="";
+c200="";
+
+var i = 1;
+var j = 1;
+var k = 0;
+
+if (k)
+{
+	for (i=1; i<=k; i++)
+	{
+		if(j==1)
+			document.write("<tr>");
+		
+		document.write("<td valign='top' align='center'>");
+		document.write("<table cellpadding='0' cellspacing='0' border='0' width='112' bgcolor='#FFFFFF'>");
+		document.write("<tr align='center'>");
+		document.write("<td width='112' colspan='3'>");
+		document.write("<img src='top.gif' width='112' height='6' border='0' align='bottom' alt=''></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td width='6'><img src='side.gif' width='1' height='77' border='0' alt=''><img src='onepixel.gif' width='5' height='1' border='0' alt=''></td>");
+		document.write("<td align='center' width='100'><a href='");
+		document.write("javascript:popwin(\"scrapbook_popup" + i + ".html\", \"Album\", \"width=750,height=500,resizable=1,scrollbars=1,status=0,toolbar=0\", \"FamilyAlbum\");");
+		document.write("'><img src='FamilyGFX/scrapbook" + i + "_thumb.jpg' border='0' alt=''></a></td>");
+		document.write("<td width='6' align='right'><img src='onepixel.gif' width='5' height='1' border='0' alt=''><img src='side.gif' width='1' height='77' border='0' alt=''></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td width='112' colspan='3'>");
+		document.write("<img src='bottom.gif' width='112' height='6' border='0' align='bottom' alt=''></td>");
+		document.write("</tr>");
+		document.write("</table>");
+		document.write("<table cellpadding='5' cellspacing='0' border='0' width='120' bgcolor=''>");
+		document.write("<tr align='center'>");
+		document.write("<td width='120' colspan='3' valign='top' align='center'>");
+		document.write("<font face=\"'Comic Sans MS',Arial,Helvetica,sans-serif\" size='2'>");
+		eval("document.write(c" + i + ");");
+		document.write("</font></td>");
+		document.write("</tr>");
+		document.write("</table></td>");
+	
+		j++;
+		if(j>3 || i>k)
+		{
+			j=1;
+			document.write("</tr>");
+		}
+	}
+}
+else
+{
+	document.write("<tr>");
+	document.write("<td valign='top' align='center'>");
+	document.write("<font face=\"'Comic Sans MS',Arial,Helvetica,sans-serif\" size='2'>Empty photo album.</font></td>");
+	document.write("</tr>");
+}
+
+</script>
+
+</table>
+
+										</td>
+										<td><img src="onepixel.gif" width="10" border="0"></td>
+							</tr>
+							<tr>
+								<td colspan="3"><img src="/onepixel.gif" width="1" height="10" border="0" alt=""></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr width="450" align="center">
+					<td><img src="onepixel.gif" width="1" height="1" border="0" alt=""></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<br>
+<span class=PageText><center><A HREF='javascript:popwin("http://thesims.com", "TheSims", "", "")'>TheSims.com</A> | <A HREF=familyhome.html>Family Home Page</A> | 
+<script>
+if (0)
+	document.write("<A HREF=house.html>Family Home</A> | ");
+</script>
+<A HREF=scrapbook1.html>Family Photo Album</A></center></span>
+
+
+</div>
+
+</body>
+</html>

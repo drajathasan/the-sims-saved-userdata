@@ -1,0 +1,19 @@
+[ResidentialLot]
+Description=Cheapest house for who have less money
+Floors=1
+Name=Cheap house
+Number=6
+[Filters]
+Lodging=True
+Food=False
+Gardening=False
+Shopping=False
+PetStore=False
+SmallAnimal=False
+Park=False
+Spa=False
+Movie=False
+Model=False
+Music=False
+MagiCo=False
+Rides=False

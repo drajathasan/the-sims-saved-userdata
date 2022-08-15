@@ -1,0 +1,193 @@
+<html>
+<head>
+
+<title>
+</title>
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=^^^^sims_web_character_set^^^^">
+<meta http-equiv="Content-Language" content="^^^^sims_web_language_code^^^^">
+
+<LINK REL=StyleSheet HREF='thesims.css' TYPE='text/css'>
+
+<style>
+
+BODY			{
+			background: #3666b4;
+			}
+
+#View        {position:absolute}
+#Main        {position:absolute}
+#Publish        {position:absolute}
+</style>
+
+<script language='Javascript'>
+<!--
+
+function mp_showLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'show';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'visible';");
+        }
+}
+
+function mp_hideLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'hide';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'hidden';");
+        }
+
+}
+
+function mp_layerVisible(layerid)
+{
+        var visible;
+
+        if (document.layers)
+        {
+                eval("visible = document." + layerid + ".visibility;");
+        }
+        else if (document.all)
+        {
+                eval("visible = " + layerid + ".style.visibility;");
+        }
+
+        if (visible == "visible")
+                return true;
+        else if (visible == "show")
+                return true;
+        else
+                return false;
+
+}
+
+function backToMain()
+{
+        mp_showLayer("Main");
+        mp_hideLayer("Publish");
+        mp_hideLayer("View");
+	document.PubInfo.State.value = "Main";
+	parent.main.location = "main.html";
+        checkStates();
+}
+
+function publish()
+{
+        mp_showLayer("Publish");
+        mp_hideLayer("Main");
+        mp_hideLayer("View");
+	document.PubInfo.State.value = "Publish";
+        parent.main.location = "publish.html";
+        checkStates();
+}
+
+function showFamily()
+{
+        mp_showLayer("View");
+        mp_hideLayer("Main");
+        mp_hideLayer("Publish");
+	document.PubInfo.State.value = "View";
+        checkStates();
+}
+
+var stateInterval;
+
+function loadMain()
+{
+        parent.main.location = "main.html";
+        setTimeout("checkStates()", 2000);
+
+        PrepareNetscapeFix();
+
+}
+
+function checkStates()
+{
+	stateInterval = setInterval("checkFrames()", 500);
+
+}
+
+
+function checkFrames()
+{
+        if (document.PubInfo.State.value == "Main")
+                if (!mp_layerVisible("Main"))
+	                backToMain();
+
+        if (document.PubInfo.State.value == "View")
+                if (!mp_layerVisible("View"))
+	                backToMain();
+
+        if (document.PubInfo.State.value == "Publish")
+                if (!mp_layerVisible("Publish"))
+	                backToMain();
+
+}
+
+function PrepareNetscapeFix()
+{
+	if (document.layers)
+		window.onresize = FixNetscape;
+}
+
+function FixNetscape()
+{
+	//document.location.href = document.location.href
+	if (document.layers)
+	        parent.location.reload();
+}
+
+//-->
+</script>
+</head>
+
+<body onload="loadMain()">
+
+<div id=Main class=BlueBackBox style="top:0; left:0; width:100%; height:100%; visibility:visible" visibility=show>
+<table width=100% height=100% cellspacing=4 cellpadding=0><tr>
+<td>
+<span class=BlueBackBox> </span>
+</td>
+</tr></table>
+</div>
+
+<div id=Publish class=BlueBackBox style="top:0; left:0; width:100%; height:100%; visibility:hidden" visibility=hide>
+<table width=100% height=100% cellspacing=4 cellpadding=0><tr>
+<td align=right valign=top>
+<a href=javascript:backToMain()><span class=BlueBackBox>Address Book</span></a>
+</td>
+</tr></table>
+</div>
+
+<div id=View class=BlueBackBox style="top:0; left:0; width:100%; height:100%; visibility:hidden" visibility=hide>
+<table width=100% height=100% cellspacing=4 cellpadding=0><tr>
+<td width=50%>
+<span class=BlueBackBox> </span>
+</td>
+<td align=right valign=top>
+<a href=javascript:publish()><span class=BlueBackBox>Teleport This Family</span></a>
+</td>
+<td align=right valign=top>
+<a href=javascript:backToMain()><span class=BlueBackBox>Address Book</span></a>
+</td>
+</tr></table>
+</div>
+
+
+<form name="PubInfo">
+<input type="hidden" name="LotName" value="Unknown">
+<input type="hidden" name="State" value="Main">
+</form>
+
+</body>
+</html>

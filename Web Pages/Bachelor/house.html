@@ -1,0 +1,373 @@
+<html>
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Number 0 Sim Lane:</title>
+<!-- #EndEditable -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="en-us">
+
+<LINK REL=StyleSheet HREF='thesims.css' TYPE='text/css'>
+
+<style type="text/css">
+<!--
+#FloorNav1         {position:absolute}
+#FloorNav2         {position:absolute}
+#FloorNav3         {position:absolute}
+#FloorCaption1         {position:absolute}
+#FloorCaption2         {position:absolute}
+#FloorCaption3         {position:absolute}
+-->
+</style>
+
+<script language='Javascript'>
+<!--
+
+familyoff = new Image();
+familyoff.src = "family_a.jpg";
+familyon = new Image();
+familyon.src = "family_c.jpg";
+
+houseoff = new Image();
+houseoff.src = "house_a.jpg";
+houseon = new Image();
+houseon.src = "house_c.jpg";
+
+photooff = new Image();
+photooff.src = "photo_a.jpg";
+photoon = new Image();
+photoon.src = "photo_c.jpg";
+
+hslevels1on = new Image();
+hslevels1on.src = "housefloor1on.jpg";
+hslevels1off = new Image();
+hslevels1off.src = "housefloor1off.jpg";
+
+hslevels2on = new Image();
+hslevels2on.src = "housefloor2on.jpg";
+hslevels2off = new Image();
+hslevels2off.src = "housefloor2off.jpg";
+
+housefloor2dis = new Image();
+housefloor2dis.src = "housefloor2dis.jpg";
+
+hslevels3on = new Image();
+hslevels3on.src = "houseroofon.jpg";
+hslevels3off = new Image();
+hslevels3off.src = "houseroofoff.jpg";
+
+houselevel3 = new Image();
+houselevel3.src = "FamilyGFX/house-exterior.jpg";
+houselevel1 = new Image();
+houselevel1.src = "FamilyGFX/house-floor1.jpg";
+
+if (0 == 2)
+{
+	houselevel2 = new Image();
+	houselevel2.src = "FamilyGFX/house-floor2.jpg";
+}
+
+
+var curfloor = "hslevels3";
+
+function popwin(URL, Name, Props)
+{
+	var newwin = open(URL, Name, Props);
+}
+
+function mp_ImgRollOn(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "on.src;");
+        }
+        else if (document.all)
+        {
+	        document[imgName].src = eval(imgName + "on.src");
+        }
+
+}
+
+function mp_ImgRollOff(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "off.src;");
+        }
+        else if (document.all)
+        {
+		document[imgName].src = eval(imgName + "off.src");
+        }
+
+}
+
+function mp_showLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'show';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'visible';");
+        }
+}
+
+function mp_hideLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'hide';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'hidden';");
+        }
+
+}
+
+function mp_SetImage(layerid, imgName, imgNew)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgNew + ".src;");
+        }
+        else if (document.all)
+        {
+		document[imgName].src = eval(imgNew + ".src");
+        }
+
+}
+
+function showHouse(floor)
+{
+	if (floor == 2)
+		if (0 == 1)
+                        return;
+	
+	mp_hideLayer("FloorCaption1");
+	mp_hideLayer("FloorCaption2");
+	mp_hideLayer("FloorCaption3");
+	mp_ImgRollOff("FloorNav1", "hslevels1");
+	mp_ImgRollOff("FloorNav2", "hslevels2");
+	mp_ImgRollOff("FloorNav3", "hslevels3");
+
+	eval("curfloor = 'hslevels" + floor + "'");
+	eval("mp_showLayer('FloorCaption" + floor + "')");
+	eval("mp_ImgRollOn('FloorNav" + floor + "', 'hslevels" + floor + "')");
+        eval("mp_SetImage('TheHouse', 'housepic', 'houselevel" + floor + "')");
+
+        setSecondFloor();
+}
+
+function navRollOn(layerid, imgName)
+{
+        if (imgName != curfloor)
+        {
+		if (layerid == 'FloorNav2')
+	        {
+			if (0 != 1)
+		                mp_ImgRollOn(layerid, imgName);
+	        }
+	        else
+	                mp_ImgRollOn(layerid, imgName);
+        }
+
+
+}
+
+function navRollOff(layerid, imgName)
+{
+        if (imgName != curfloor)
+        {
+		if (layerid == 'FloorNav2')
+	        {
+			if (0 != 1)
+		                mp_ImgRollOff(layerid, imgName);
+	        }
+	        else
+	                mp_ImgRollOff(layerid, imgName);
+        }
+}
+
+function setSecondFloor()
+{
+
+	if (0 == 1)
+	{
+	        eval("mp_SetImage('FloorNav2','hslevels2','housefloor2dis')");
+	}
+
+}
+
+
+//-->
+</script>
+</head>
+
+<body onload="setSecondFloor()">
+
+<div id="NavBar" style="position:absolute; left:0px; top:0px; width:150px; height:600px; z-index:1">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><a href="familyhome.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','family')"
+		onmouseout	= "mp_ImgRollOff('NavBar','family')">
+		<IMG SRC="family_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></a></TD></TR>
+	<TR><TD><IMG SRC="house_c.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="house"></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBar','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+
+<div id='CenterBox' style='position:absolute; left:125px; top:0px; width:571px; height:425px'>
+	<TABLE BORDER=0 WIDTH=571 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=39 WIDTH=570 BORDER=0 ALIGN=middle SRC=familyhometxt.jpg><img src="border39.gif" VSPACE=0 HSPACE=0 ALIGN=middle width="1" height="39" border="0"></TD></TR>
+	</TABLE>
+
+	<TABLE BORDER=0 WIDTH=571 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+			<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=570  WIDTH=1 BORDER=0 ALIGN=left ></TD>
+			<TD BGCOLOR=#EEEEDD WIDTH=571><br></TD>
+			<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=570  WIDTH=1 BORDER=0 ALIGN=right ></TD>
+		</TR>
+	</TABLE>
+	
+	<TABLE BORDER=0 WIDTH=571 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=1 WIDTH=571 BORDER=0 SRC=border.gif ALIGN=top></TD></TR>
+	</TABLE>
+</div>
+
+
+<div id="LinksBar" style="position:absolute; left:125px; top:620px; width:571px; height:20px; z-index:40">
+<span class=PageText><center><A HREF='javascript:popwin("http://thesims.com", "TheSims", "")'>TheSims.com</A> | <A HREF=familyhome.html>Family Home Page</A> | 
+<script>
+if (0)
+	document.write("<A HREF=house.html>Family Home</A> | ");
+</script>
+<A HREF=scrapbook1.html>Family Photo Album</A></center></span>
+</div>
+
+
+<div id="TitleText" style="position:absolute; left:125px; top:65px; width:571px; height:20px;">
+<span class=BlueTitleText><center>Bachelor</center></span>
+</div>
+
+
+<div id="FloorNav3" style="position:absolute; left:605px; top:125px; width:88px; height:35px; z-index:29">
+<a href=javascript:showHouse(3)
+	onmouseover	= "navRollOn('FloorNav3','hslevels3')"
+	onmouseout	= "navRollOff('FloorNav3','hslevels3')">
+<IMG SRC="houseroofon.jpg" NAME="hslevels3" BORDER=0 VSPACE=0 ALIGN=top></a>
+</div>
+
+<div id="FloorNav2" style="position:absolute; left:605px; top:160px; width:88px; height:23px; z-index:30">
+<a href=javascript:showHouse(2)
+	onmouseover	= "navRollOn('FloorNav2','hslevels2')"
+	onmouseout	= "navRollOff('FloorNav2','hslevels2')">
+<IMG SRC='housefloor2off.jpg' NAME='hslevels2' BORDER=0 VSPACE=0 ALIGN=top></a>
+</div>
+
+<div id="FloorNav1" style="position:absolute; left:605px; top:183px; width:88px; height:23px; z-index:31">
+<a href=javascript:showHouse(1)
+	onmouseover	= "navRollOn('FloorNav1','hslevels1')"
+	onmouseout	= "navRollOff('FloorNav1','hslevels1')">
+<IMG SRC="housefloor1off.jpg" NAME="hslevels1" BORDER=0 VSPACE=0 ALIGN=top></a>
+</div>
+
+
+
+<div id="FloorCaption1" style="position:absolute; left:152px; top:430px; width:442px; height:24px;" class=PhotoCaption>
+<table width=442 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<span class=PhotoCaption>Number 0 Sim Lane: First Floor Interior</span>
+</td></tr></table></div>
+
+<div id="FloorCaption2" style="position:absolute; left:152px; top:430px; width:442px; height:24px;" class=PhotoCaption>
+<table width=442 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<span class=PhotoCaption>Number 0 Sim Lane: Second Floor Interior</span>
+</td></tr></table></div>
+
+<div id="FloorCaption3" style="position:absolute; left:152px; top:430px; width:442px; height:24px;" class=PhotoCaption>
+<table width=442 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<span class=PhotoCaption>Number 0 Sim Lane: Exterior</span>
+</td></tr></table></div>
+
+<div id="FloorShadow" style="position:absolute; left:152px; top:454px; width:442px; height:3px;" class=PhotoBoxShadow>
+<table width=442 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div id="TheHouse" style="position:absolute; left:152px; top:127px; width:442px; height:298px;" class=PhotoBox>
+<table height=298 width=442 border=0 cellpadding=0 cellspacing=0>
+<tr><td align=center valign=middle>
+<span class=PhotoBox><img src="FamilyGFX/house-exterior.jpg" NAME="housepic"></span>
+</td></tr></table></div>
+
+<div id="HouseShadow" style="position:absolute; left:152px; top:425px; width:442px; height:3px;" class=PhotoBoxShadow>
+<table width=442 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+
+<div id="Layer16" style="position:absolute; left:152px; top:457px; width:212px; height:136px; z-index:24">
+  <table width="210" border="0" height="150">
+    <tr>
+      <td width="77%" height="26"><span class=BlueHeadingText>Information</span></td>
+      <td width="23%" height="26">&nbsp;</td>
+    </tr>
+    <tr> 
+      <td width="77%" height="0"><span class=PageText>Value:</span></td>
+      <td width="23%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr> 
+      <td width="77%" height="0"><span class=PageText>Square Feet:</span></td>
+      <td width="23%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr> 
+      <td width="77%" height="0"><span class=PageText>Number of Floors:</span></td>
+      <td width="23%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr> 
+      <td width="77%" height="0"><span class=PageText>Number of Bathrooms:</span></td>
+      <td width="23%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr>
+      <td width="77%" height="23"><span class=PageText>Number of Bedrooms:</span></td>
+      <td width="23%" height="23"><span class=RedText>0</span></td>
+    </tr>
+  </table>
+  <p>&nbsp; </p>
+</div>
+<div id="Layer4" style="position:absolute; left:384px; top:457px; width:228px; height:172px; z-index:25">
+  <table width="210" border="0" height="150">
+    <tr> 
+      <td width="76%" height="25"><span class=BlueHeadingText>Statistics</span></td>
+      <td width="24%" height="25">&nbsp;</td>
+    </tr>
+    <tr> 
+      <td width="76%" height="25"><span class=PageText>Size:</span></td>
+      <td width="24%" height="25"><span class=RedText>0</span></td>
+    </tr>
+    <tr>
+      <td width="76%" height="0"><span class=PageText>Furnishings:</span></td>
+      <td width="24%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr>
+      <td width="76%" height="0"><span class=PageText>Yard:</span></td>
+      <td width="24%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr>
+      <td width="76%" height="0"><span class=PageText>Upkeep:</span></td>
+      <td width="24%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr>
+      <td width="76%" height="23"><span class=PageText>Layout:</span></td>
+      <td width="24%" height="23"><span class=RedText>0</span></td>
+    </tr>
+  </table>
+</div>
+
+
+</body>
+</html>

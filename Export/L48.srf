@@ -1,0 +1,19 @@
+[IslandLot]
+Description=As an Island Historic Landmark, the Palazzo Palms Hotel has a rich and colorful heritage…and attracts a rich and colorful crowd! Check it out…when you check in.
+Floors=2
+Name=Palazzo Palms Hotel:
+Number=48
+[Filters]
+Lodging=True
+Food=True
+Gardening=False
+Shopping=True
+PetStore=False
+SmallAnimal=False
+Park=True
+Spa=True
+Movie=False
+Model=False
+Music=False
+MagiCo=False
+Rides=False

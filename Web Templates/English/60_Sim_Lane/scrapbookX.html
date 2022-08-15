@@ -1,0 +1,454 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=^^^^sims_web_character_set^^^^">
+<meta http-equiv="Content-Language" content="^^^^sims_web_language_code^^^^">
+
+<!-- #BeginEditable "doctitle" -->
+<title>The ^^^^sims_family_name^^^^ Photo Album</title>
+<!-- #EndEditable -->
+
+<LINK REL=StyleSheet HREF='thesims.css' TYPE='text/css'>
+
+<style type="text/css">
+<!--
+#NavBar             {position:absolute}
+#NavBarNoHouse       {position:absolute}
+-->
+</style>
+
+<script language='Javascript'>
+<!--
+
+familyoff = new Image();
+familyoff.src = "family_a.jpg";
+familyon = new Image();
+familyon.src = "family_c.jpg";
+
+houseoff = new Image();
+houseoff.src = "house_a.jpg";
+houseon = new Image();
+houseon.src = "house_c.jpg";
+
+photooff = new Image();
+photooff.src = "photo_a.jpg";
+photoon = new Image();
+photoon.src = "photo_c.jpg";
+
+function popwin(URL, Name, Props, thisWin)
+{
+	var newwin = open(URL, Name, Props);
+}
+
+function mp_ImgRollOn(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "on.src;");
+        }
+        else if (document.all)
+        {
+	        //document[imgName].src = eval(imgName + "on.src");
+	        eval(layerid + ".all['" + imgName + "'].src = " + imgName + "on.src");
+        }
+
+}
+
+function mp_ImgRollOff(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "off.src;");
+        }
+        else if (document.all)
+        {
+		//document[imgName].src = eval(imgName + "off.src");
+	        eval(layerid + ".all['" + imgName + "'].src = " + imgName + "off.src");
+        }
+
+}
+
+function mp_showLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'show';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'visible';");
+        }
+}
+
+function CheckHouse()
+{
+        if (^^^^sims_house_address^^^^)
+                mp_showLayer('NavBar');
+        else
+                mp_showLayer('NavBarNoHouse');
+
+
+}
+
+//-->
+</script>
+</head>
+
+<body onload="CheckHouse()">
+
+<div id="NavBar" style="position:absolute; left:0px; top:0px; width:150px; height:600px; z-index:1; visibility:hidden" visibility="hide">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><a href="familyhome.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','family')"
+		onmouseout	= "mp_ImgRollOff('NavBar','family')">
+		<IMG SRC="family_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></a></TD></TR>
+	<TR><TD><a href="house.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','house')"
+		onmouseout	= "mp_ImgRollOff('NavBar','house')">
+		<IMG SRC="house_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="house"></a></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+ 		onmouseover	= "mp_ImgRollOn('NavBar','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBar','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+<div id="NavBarNoHouse" style="position:absolute; left:0px; top:0px; width:150px; height:600px; z-index:1; visibility:hidden" visibility="hide">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><a href="familyhome.html"
+		onmouseover	= "mp_ImgRollOn('NavBarNoHouse','family')"
+		onmouseout	= "mp_ImgRollOff('NavBarNoHouse','family')">
+		<IMG SRC="family_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></a></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+ 		onmouseover	= "mp_ImgRollOn('NavBarNoHouse','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBarNoHouse','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+<div style="position:absolute; left:125px; top:0px;">
+
+<table cellpadding="0" cellspacing="0" border="0" width="450">
+	<tr width="450" align="center">
+		<td><img src="familyphotoalbumtxt.jpg" width="449" height="39" border="0"><img src="border39.gif" width="1" height="39" border="0"></td>
+	</tr>
+	<tr width="450" align="center">
+		<td>
+			<table bgcolor="#3666b4" width="450" cellpadding="0" cellspacing="0" border="0">
+				<tr width="448" align="center">
+					<td>
+						<table width="448" bgcolor="#EEEEDD" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td colspan="3"><img src="onepixel.gif" width="10" height="12" border="0"></td>
+							</tr>
+									<tr>
+										<td><img src="onepixel.gif" width="10" border="0"></td>
+										<td valign="top" align="center" bgcolor="#EEEEDD">
+<!-- Insert content here -->
+<table cellpadding="5" cellspacing="0" border="0" bgcolor="#EEEEDD">
+	<tr>
+		<td valign="top" align="center">
+		<font face="Arial,Helvetica,sans-serif" size="3" color="#113399"><b>^^^^sims_family_name^^^^</b></font></td>
+	</tr>
+</table>
+
+<br>
+
+<table cellpadding="5" cellspacing="0" border="0" bgcolor="#EEEEDD">
+
+<script>
+
+// preset captions
+c1="^^^^sims_scrapbook1_caption^^^^";
+c2="^^^^sims_scrapbook2_caption^^^^";
+c3="^^^^sims_scrapbook3_caption^^^^";
+c4="^^^^sims_scrapbook4_caption^^^^";
+c5="^^^^sims_scrapbook5_caption^^^^";
+c6="^^^^sims_scrapbook6_caption^^^^";
+c7="^^^^sims_scrapbook7_caption^^^^";
+c8="^^^^sims_scrapbook8_caption^^^^";
+c9="^^^^sims_scrapbook9_caption^^^^";
+c10="^^^^sims_scrapbook10_caption^^^^";
+c11="^^^^sims_scrapbook11_caption^^^^";
+c12="^^^^sims_scrapbook12_caption^^^^";
+c13="^^^^sims_scrapbook13_caption^^^^";
+c14="^^^^sims_scrapbook14_caption^^^^";
+c15="^^^^sims_scrapbook15_caption^^^^";
+c16="^^^^sims_scrapbook16_caption^^^^";
+c17="^^^^sims_scrapbook17_caption^^^^";
+c18="^^^^sims_scrapbook18_caption^^^^";
+c19="^^^^sims_scrapbook19_caption^^^^";
+c20="^^^^sims_scrapbook20_caption^^^^";
+c21="^^^^sims_scrapbook21_caption^^^^";
+c22="^^^^sims_scrapbook22_caption^^^^";
+c23="^^^^sims_scrapbook23_caption^^^^";
+c24="^^^^sims_scrapbook24_caption^^^^";
+c25="^^^^sims_scrapbook25_caption^^^^";
+c26="^^^^sims_scrapbook26_caption^^^^";
+c27="^^^^sims_scrapbook27_caption^^^^";
+c28="^^^^sims_scrapbook28_caption^^^^";
+c29="^^^^sims_scrapbook29_caption^^^^";
+c30="^^^^sims_scrapbook30_caption^^^^";
+c31="^^^^sims_scrapbook31_caption^^^^";
+c32="^^^^sims_scrapbook32_caption^^^^";
+c33="^^^^sims_scrapbook33_caption^^^^";
+c34="^^^^sims_scrapbook34_caption^^^^";
+c35="^^^^sims_scrapbook35_caption^^^^";
+c36="^^^^sims_scrapbook36_caption^^^^";
+c37="^^^^sims_scrapbook37_caption^^^^";
+c38="^^^^sims_scrapbook38_caption^^^^";
+c39="^^^^sims_scrapbook39_caption^^^^";
+c40="^^^^sims_scrapbook40_caption^^^^";
+c41="^^^^sims_scrapbook41_caption^^^^";
+c42="^^^^sims_scrapbook42_caption^^^^";
+c43="^^^^sims_scrapbook43_caption^^^^";
+c44="^^^^sims_scrapbook44_caption^^^^";
+c45="^^^^sims_scrapbook45_caption^^^^";
+c46="^^^^sims_scrapbook46_caption^^^^";
+c47="^^^^sims_scrapbook47_caption^^^^";
+c48="^^^^sims_scrapbook48_caption^^^^";
+c49="^^^^sims_scrapbook49_caption^^^^";
+c50="^^^^sims_scrapbook50_caption^^^^";
+c51="^^^^sims_scrapbook51_caption^^^^";
+c52="^^^^sims_scrapbook52_caption^^^^";
+c53="^^^^sims_scrapbook53_caption^^^^";
+c54="^^^^sims_scrapbook54_caption^^^^";
+c55="^^^^sims_scrapbook55_caption^^^^";
+c56="^^^^sims_scrapbook56_caption^^^^";
+c57="^^^^sims_scrapbook57_caption^^^^";
+c58="^^^^sims_scrapbook58_caption^^^^";
+c59="^^^^sims_scrapbook59_caption^^^^";
+c60="^^^^sims_scrapbook60_caption^^^^";
+c61="^^^^sims_scrapbook61_caption^^^^";
+c62="^^^^sims_scrapbook62_caption^^^^";
+c63="^^^^sims_scrapbook63_caption^^^^";
+c64="^^^^sims_scrapbook64_caption^^^^";
+c65="^^^^sims_scrapbook65_caption^^^^";
+c66="^^^^sims_scrapbook66_caption^^^^";
+c67="^^^^sims_scrapbook67_caption^^^^";
+c68="^^^^sims_scrapbook68_caption^^^^";
+c69="^^^^sims_scrapbook69_caption^^^^";
+c70="^^^^sims_scrapbook70_caption^^^^";
+c71="^^^^sims_scrapbook71_caption^^^^";
+c72="^^^^sims_scrapbook72_caption^^^^";
+c73="^^^^sims_scrapbook73_caption^^^^";
+c74="^^^^sims_scrapbook74_caption^^^^";
+c75="^^^^sims_scrapbook75_caption^^^^";
+c76="^^^^sims_scrapbook76_caption^^^^";
+c77="^^^^sims_scrapbook77_caption^^^^";
+c78="^^^^sims_scrapbook78_caption^^^^";
+c79="^^^^sims_scrapbook79_caption^^^^";
+c80="^^^^sims_scrapbook80_caption^^^^";
+c81="^^^^sims_scrapbook81_caption^^^^";
+c82="^^^^sims_scrapbook82_caption^^^^";
+c83="^^^^sims_scrapbook83_caption^^^^";
+c84="^^^^sims_scrapbook84_caption^^^^";
+c85="^^^^sims_scrapbook85_caption^^^^";
+c86="^^^^sims_scrapbook86_caption^^^^";
+c87="^^^^sims_scrapbook87_caption^^^^";
+c88="^^^^sims_scrapbook88_caption^^^^";
+c89="^^^^sims_scrapbook89_caption^^^^";
+c90="^^^^sims_scrapbook90_caption^^^^";
+c91="^^^^sims_scrapbook91_caption^^^^";
+c92="^^^^sims_scrapbook92_caption^^^^";
+c93="^^^^sims_scrapbook93_caption^^^^";
+c94="^^^^sims_scrapbook94_caption^^^^";
+c95="^^^^sims_scrapbook95_caption^^^^";
+c96="^^^^sims_scrapbook96_caption^^^^";
+c97="^^^^sims_scrapbook97_caption^^^^";
+c98="^^^^sims_scrapbook98_caption^^^^";
+c99="^^^^sims_scrapbook99_caption^^^^";
+c100="^^^^sims_scrapbook100_caption^^^^";
+c101="^^^^sims_scrapbook101_caption^^^^";
+c102="^^^^sims_scrapbook102_caption^^^^";
+c103="^^^^sims_scrapbook103_caption^^^^";
+c104="^^^^sims_scrapbook104_caption^^^^";
+c105="^^^^sims_scrapbook105_caption^^^^";
+c106="^^^^sims_scrapbook106_caption^^^^";
+c107="^^^^sims_scrapbook107_caption^^^^";
+c108="^^^^sims_scrapbook108_caption^^^^";
+c109="^^^^sims_scrapbook109_caption^^^^";
+c110="^^^^sims_scrapbook110_caption^^^^";
+c111="^^^^sims_scrapbook111_caption^^^^";
+c112="^^^^sims_scrapbook112_caption^^^^";
+c113="^^^^sims_scrapbook113_caption^^^^";
+c114="^^^^sims_scrapbook114_caption^^^^";
+c115="^^^^sims_scrapbook115_caption^^^^";
+c116="^^^^sims_scrapbook116_caption^^^^";
+c117="^^^^sims_scrapbook117_caption^^^^";
+c118="^^^^sims_scrapbook118_caption^^^^";
+c119="^^^^sims_scrapbook119_caption^^^^";
+c120="^^^^sims_scrapbook120_caption^^^^";
+c121="^^^^sims_scrapbook121_caption^^^^";
+c122="^^^^sims_scrapbook122_caption^^^^";
+c123="^^^^sims_scrapbook123_caption^^^^";
+c124="^^^^sims_scrapbook124_caption^^^^";
+c125="^^^^sims_scrapbook125_caption^^^^";
+c126="^^^^sims_scrapbook126_caption^^^^";
+c127="^^^^sims_scrapbook127_caption^^^^";
+c128="^^^^sims_scrapbook128_caption^^^^";
+c129="^^^^sims_scrapbook129_caption^^^^";
+c130="^^^^sims_scrapbook130_caption^^^^";
+c131="^^^^sims_scrapbook131_caption^^^^";
+c132="^^^^sims_scrapbook132_caption^^^^";
+c133="^^^^sims_scrapbook133_caption^^^^";
+c134="^^^^sims_scrapbook134_caption^^^^";
+c135="^^^^sims_scrapbook135_caption^^^^";
+c136="^^^^sims_scrapbook136_caption^^^^";
+c137="^^^^sims_scrapbook137_caption^^^^";
+c138="^^^^sims_scrapbook138_caption^^^^";
+c139="^^^^sims_scrapbook139_caption^^^^";
+c140="^^^^sims_scrapbook140_caption^^^^";
+c141="^^^^sims_scrapbook141_caption^^^^";
+c142="^^^^sims_scrapbook142_caption^^^^";
+c143="^^^^sims_scrapbook143_caption^^^^";
+c144="^^^^sims_scrapbook144_caption^^^^";
+c145="^^^^sims_scrapbook145_caption^^^^";
+c146="^^^^sims_scrapbook146_caption^^^^";
+c147="^^^^sims_scrapbook147_caption^^^^";
+c148="^^^^sims_scrapbook148_caption^^^^";
+c149="^^^^sims_scrapbook149_caption^^^^";
+c150="^^^^sims_scrapbook150_caption^^^^";
+c151="^^^^sims_scrapbook151_caption^^^^";
+c152="^^^^sims_scrapbook152_caption^^^^";
+c153="^^^^sims_scrapbook153_caption^^^^";
+c154="^^^^sims_scrapbook154_caption^^^^";
+c155="^^^^sims_scrapbook155_caption^^^^";
+c156="^^^^sims_scrapbook156_caption^^^^";
+c157="^^^^sims_scrapbook157_caption^^^^";
+c158="^^^^sims_scrapbook158_caption^^^^";
+c159="^^^^sims_scrapbook159_caption^^^^";
+c160="^^^^sims_scrapbook160_caption^^^^";
+c161="^^^^sims_scrapbook161_caption^^^^";
+c162="^^^^sims_scrapbook162_caption^^^^";
+c163="^^^^sims_scrapbook163_caption^^^^";
+c164="^^^^sims_scrapbook164_caption^^^^";
+c165="^^^^sims_scrapbook165_caption^^^^";
+c166="^^^^sims_scrapbook166_caption^^^^";
+c167="^^^^sims_scrapbook167_caption^^^^";
+c168="^^^^sims_scrapbook168_caption^^^^";
+c169="^^^^sims_scrapbook169_caption^^^^";
+c170="^^^^sims_scrapbook170_caption^^^^";
+c171="^^^^sims_scrapbook171_caption^^^^";
+c172="^^^^sims_scrapbook172_caption^^^^";
+c173="^^^^sims_scrapbook173_caption^^^^";
+c174="^^^^sims_scrapbook174_caption^^^^";
+c175="^^^^sims_scrapbook175_caption^^^^";
+c176="^^^^sims_scrapbook176_caption^^^^";
+c177="^^^^sims_scrapbook177_caption^^^^";
+c178="^^^^sims_scrapbook178_caption^^^^";
+c179="^^^^sims_scrapbook179_caption^^^^";
+c180="^^^^sims_scrapbook180_caption^^^^";
+c181="^^^^sims_scrapbook181_caption^^^^";
+c182="^^^^sims_scrapbook182_caption^^^^";
+c183="^^^^sims_scrapbook183_caption^^^^";
+c184="^^^^sims_scrapbook184_caption^^^^";
+c185="^^^^sims_scrapbook185_caption^^^^";
+c186="^^^^sims_scrapbook186_caption^^^^";
+c187="^^^^sims_scrapbook187_caption^^^^";
+c188="^^^^sims_scrapbook188_caption^^^^";
+c189="^^^^sims_scrapbook189_caption^^^^";
+c190="^^^^sims_scrapbook190_caption^^^^";
+c191="^^^^sims_scrapbook191_caption^^^^";
+c192="^^^^sims_scrapbook192_caption^^^^";
+c193="^^^^sims_scrapbook193_caption^^^^";
+c194="^^^^sims_scrapbook194_caption^^^^";
+c195="^^^^sims_scrapbook195_caption^^^^";
+c196="^^^^sims_scrapbook196_caption^^^^";
+c197="^^^^sims_scrapbook197_caption^^^^";
+c198="^^^^sims_scrapbook198_caption^^^^";
+c199="^^^^sims_scrapbook199_caption^^^^";
+c200="^^^^sims_scrapbook200_caption^^^^";
+
+var i = 1;
+var j = 1;
+var k = ^^^^sims_scrapbook_numpages^^^^;
+
+if (k)
+{
+	for (i=1; i<=k; i++)
+	{
+		if(j==1)
+			document.write("<tr>");
+		
+		document.write("<td valign='top' align='center'>");
+		document.write("<table cellpadding='0' cellspacing='0' border='0' width='112' bgcolor='#FFFFFF'>");
+		document.write("<tr align='center'>");
+		document.write("<td width='112' colspan='3'>");
+		document.write("<img src='top.gif' width='112' height='6' border='0' align='bottom' alt=''></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td width='6'><img src='side.gif' width='1' height='77' border='0' alt=''><img src='onepixel.gif' width='5' height='1' border='0' alt=''></td>");
+		document.write("<td align='center' width='100'><a href='");
+		document.write("javascript:popwin(\"scrapbook_popup" + i + ".html\", \"Album\", \"width=750,height=500,resizable=1,scrollbars=1,status=0,toolbar=0\", \"FamilyAlbum\");");
+		document.write("'><img src='FamilyGFX/scrapbook" + i + "_thumb.jpg' border='0' alt=''></a></td>");
+		document.write("<td width='6' align='right'><img src='onepixel.gif' width='5' height='1' border='0' alt=''><img src='side.gif' width='1' height='77' border='0' alt=''></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td width='112' colspan='3'>");
+		document.write("<img src='bottom.gif' width='112' height='6' border='0' align='bottom' alt=''></td>");
+		document.write("</tr>");
+		document.write("</table>");
+		document.write("<table cellpadding='5' cellspacing='0' border='0' width='120' bgcolor=''>");
+		document.write("<tr align='center'>");
+		document.write("<td width='120' colspan='3' valign='top' align='center'>");
+		document.write("<font face=\"'Comic Sans MS',Arial,Helvetica,sans-serif\" size='2'>");
+		eval("document.write(c" + i + ");");
+		document.write("</font></td>");
+		document.write("</tr>");
+		document.write("</table></td>");
+	
+		j++;
+		if(j>3 || i>k)
+		{
+			j=1;
+			document.write("</tr>");
+		}
+	}
+}
+else
+{
+	document.write("<tr>");
+	document.write("<td valign='top' align='center'>");
+	document.write("<font face=\"'Comic Sans MS',Arial,Helvetica,sans-serif\" size='2'>Empty photo album.</font></td>");
+	document.write("</tr>");
+}
+
+</script>
+
+</table>
+
+										</td>
+										<td><img src="onepixel.gif" width="10" border="0"></td>
+							</tr>
+							<tr>
+								<td colspan="3"><img src="/onepixel.gif" width="1" height="10" border="0" alt=""></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr width="450" align="center">
+					<td><img src="onepixel.gif" width="1" height="1" border="0" alt=""></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<br>
+<span class=PageText><center><A HREF='javascript:popwin("http://thesims.com", "TheSims", "", "")'>TheSims.com</A> | <A HREF=familyhome.html>Family Home Page</A> | 
+<script>
+if (^^^^sims_house_address^^^^)
+	document.write("<A HREF=house.html>Family Home</A> | ");
+</script>
+<A HREF=scrapbook1.html>Family Photo Album</A></center></span>
+
+
+</div>
+
+</body>
+</html>
