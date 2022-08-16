@@ -1,0 +1,19 @@
+[ResidentialLot]
+Description=For big familiy
+Floors=2
+Name=Rich House
+Number=2
+[Filters]
+Lodging=True
+Food=False
+Gardening=False
+Shopping=False
+PetStore=False
+SmallAnimal=False
+Park=False
+Spa=False
+Movie=False
+Model=False
+Music=False
+MagiCo=False
+Rides=False

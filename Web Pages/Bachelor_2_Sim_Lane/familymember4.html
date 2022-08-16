@@ -1,0 +1,511 @@
+<html>
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Biography</title>
+<!-- #EndEditable -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="en-us">
+
+<LINK REL=StyleSheet HREF='thesims.css' TYPE='text/css'>
+
+<style type="text/css">
+<!--
+#NavBar             {position:absolute}
+#NavBarNoHouse       {position:absolute}
+-->
+</style>
+
+<script language='Javascript'>
+<!--
+
+familyoff = new Image();
+familyoff.src = "family_a.jpg";
+familyon = new Image();
+familyon.src = "family_c.jpg";
+
+houseoff = new Image();
+houseoff.src = "house_a.jpg";
+houseon = new Image();
+houseon.src = "house_c.jpg";
+
+photooff = new Image();
+photooff.src = "photo_a.jpg";
+photoon = new Image();
+photoon.src = "photo_c.jpg";
+
+function popwin(URL, Name, Props)
+{
+	var newwin = open(URL, Name, Props);
+}
+
+function mp_ImgRollOn(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "on.src;");
+        }
+        else if (document.all)
+        {
+	        //document[imgName].src = eval(imgName + "on.src");
+	        eval(layerid + ".all['" + imgName + "'].src = " + imgName + "on.src");
+        }
+
+}
+
+function mp_ImgRollOff(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "off.src;");
+        }
+        else if (document.all)
+        {
+		//document[imgName].src = eval(imgName + "off.src");
+	        eval(layerid + ".all['" + imgName + "'].src = " + imgName + "off.src");
+        }
+
+}
+
+function mp_showLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'show';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'visible';");
+        }
+}
+
+function CheckHouse()
+{
+        if (2)
+                mp_showLayer('NavBar');
+        else
+                mp_showLayer('NavBarNoHouse');
+
+
+}
+
+//-->
+</script>
+</head>
+
+<body onload="CheckHouse()">
+
+<div id="NavBar" style="position:absolute; left:0px; top:0px; width:150px; height:600px; z-index:1; visibility:hidden" visibility="hide">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><a href="familyhome.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','family')"
+		onmouseout	= "mp_ImgRollOff('NavBar','family')">
+		<IMG SRC="family_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></a></TD></TR>
+	<TR><TD><a href="house.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','house')"
+		onmouseout	= "mp_ImgRollOff('NavBar','house')">
+		<IMG SRC="house_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="house"></a></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+ 		onmouseover	= "mp_ImgRollOn('NavBar','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBar','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+<div id="NavBarNoHouse" style="position:absolute; left:0px; top:0px; width:150px; height:600px; z-index:1; visibility:hidden" visibility="hide">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><a href="familyhome.html"
+		onmouseover	= "mp_ImgRollOn('NavBarNoHouse','family')"
+		onmouseout	= "mp_ImgRollOff('NavBarNoHouse','family')">
+		<IMG SRC="family_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></a></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+ 		onmouseover	= "mp_ImgRollOn('NavBarNoHouse','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBarNoHouse','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+<div id='CenterBox' style='position:absolute; left:125px; top:0px; width:365px; height:425px'>
+	<TABLE BORDER=0 WIDTH=365 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=39 WIDTH=364 BORDER=0 ALIGN=middle SRC=familymembertxt.jpg><img src="border39.gif" VSPACE=0 HSPACE=0 ALIGN=middle width="1" height="39" border="0"></TD></TR>
+	</TABLE>
+
+	<TABLE BORDER=0 WIDTH=365 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+			<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=550  WIDTH=1 BORDER=0 ALIGN=left ></TD>
+			<TD BGCOLOR=#EEEEDD WIDTH=365><br></TD>
+			<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=550  WIDTH=1 BORDER=0 ALIGN=right ></TD>
+		</TR>
+	</TABLE>
+	
+	<TABLE BORDER=0 WIDTH=365 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=1 WIDTH=365 BORDER=0 SRC=border.gif ALIGN=top></TD></TR>
+	</TABLE>
+</div>
+
+<div id='PersonalStatsBox' style='position:absolute; left:510px; top:0px; width:175px; height:425px'>
+	<TABLE BORDER=0 WIDTH=175 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=39 WIDTH=174 BORDER=0 ALIGN=middle SRC=personalstatstxt.jpg><img src="border39.gif" VSPACE=0 HSPACE=0 ALIGN=middle width="1" height="39" border="0"></TD></TR>
+	</TABLE>
+	
+	<TABLE BORDER=0 WIDTH=175 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+			<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=550  WIDTH=1 BORDER=0 ALIGN=left ></TD>
+			<TD BGCOLOR=#EEEEDD WIDTH=175><br></TD>
+			<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=550  WIDTH=1 BORDER=0 ALIGN=right ></TD>
+		</TR>
+	</TABLE>
+	
+	<TABLE BORDER=0 WIDTH=175 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=1 WIDTH=175 BORDER=0 SRC=border.gif ALIGN=top></TD></TR>
+	</TABLE>
+</div>
+
+
+<div id="TitleText" style="position:absolute; overflow:hidden; left:125px; top:50px; width:365px; height:20px;">
+<span class=BlueHeadingText><center>Betty</center></span>
+</div>
+
+<div id="Layer4" style="position:absolute; left:351px; top:100px; width:110px; height:230px;">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 BGCOLOR=#E7E7EF>
+	<TR HEIGHT=5px><TD HEIGHT=5px></TD><TD></TD><TD></TD></TR>
+	<TR><TD WIDTH=5></TD><TD><img src="FamilyGFX/family4_full.jpg" width="100" height="220"></TD><TD WIDTH=5></TD></TR>
+	<TR HEIGHT=5px><TD HEIGHT=5px></TD><TD></TD><TD></TD></TR>
+	<TR HEIGHT=3px BGCOLOR=#B8A058><TD HEIGHT=3px BGCOLOR=#B8A058></TD><TD BGCOLOR=#B8A058></TD><TD BGCOLOR=#B8A058></TD></TR>
+</TABLE>
+</div>
+
+<div id="Layer6" style="position:absolute; left:160px; top:100px; width:176px; height:185px; z-index:9; overflow: visible">
+  <table width="170" border="0" height="42%">
+    <tr nowrap bordercolor="#FFE77B"> 
+      <td width="60%" height="0"><span class=BlueHeadingText>Bio</span></td>
+      <td width="40%" height="0">&nbsp;</td>
+    </tr>
+    <tr nowrap bordercolor="#FFE77B"> 
+      <td width="60%" height="0"><span class=PageText>Gender:</span></td>
+      <td width="40%" height="0"><span class=RedText>Female</span></td>
+    </tr>
+    <tr nowrap bordercolor="#FFE77B">
+      <td width="60%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Kid/Adult:" );
+		}
+	  </script>
+	  </span></td>
+      <td width="40%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Adult" );
+		}
+	  </script>
+	  </span></td>
+	</tr>
+    <tr nowrap bordercolor="#FFE77B"> 
+      <td width="60%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Astrological Sign:" );
+		}
+	  </script>
+	  </span></td>
+      <td width="40%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Aries" );
+		}
+	  </script>
+	  </span></td>
+    </tr>
+    <tr nowrap bordercolor="#FFE77B"> 
+      <td width="60%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Career Path:" );
+		}
+	  </script>
+	  </span></td>
+      <td width="40%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Unemployed" );
+		}
+	  </script>
+	  </span></td>
+    </tr>
+    <tr nowrap bordercolor="#FFE77B"> 
+      <td width="60%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Current Job:" );
+		}
+	  </script>
+	  </span></td>
+      <td width="40%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+	    if ( "human" == "human" )
+		{
+		  document.write( "Unemployed" );
+		}
+	  </script>
+	  </span></td>
+    </tr>
+    <tr nowrap bordercolor="#FFE77B">
+      <td width="60%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Job Performance:" );
+	    }
+	  </script>
+	  </span></td>
+      <td width="40%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "0" );
+		}
+	  </script>
+	  </span></td>
+    </tr>
+    <tr nowrap bordercolor="#FFE77B"> 
+      <td width="60%" height="0">
+	  <span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Current Salary:" );
+		}
+	  </script>
+	  </span></td>
+      <td width="40%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "0" );
+		}
+	  </script>
+	  </span></td>
+    </tr>
+  </table>
+</div>
+
+<div id="Layer7" style="position:absolute; left:543px; top:100px; width:160px; height:120px; z-index:12">
+  <table width="150" border="0" height="48%">
+    <tr>
+      <td width="69%" height="0"><span class=BlueHeadingText>Personality</span></td>
+      <td width="31%" height="0">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="69%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Neat:" );
+		} 
+		else 
+		{
+		  document.write( "Quiet:" );
+		}
+	  </script>	
+	  </span></td>
+      <td width="31%" height="0"><span class=RedText>6</span></td>
+    </tr>
+    <tr>
+      <td width="69%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Outgoing:" );
+		} 
+		else 
+		{
+		  document.write( "Friendly:" );
+		}
+	  </script>	
+	  </span></td>
+      <td width="31%" height="0"><span class=RedText>7</span></td>
+    </tr>
+    <tr>
+      <td width="69%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Active:" );
+		} 
+		else 
+		{
+		  document.write( "Playful:" );
+		}
+	  </script>	
+	  </span></td>
+      <td width="31%" height="0"><span class=RedText>4</span></td>
+    </tr>
+    <tr> 
+      <td width="69%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Playful:" );
+		} 
+		else 
+		{
+		  document.write( "Smart:" );
+		}
+	  </script>	
+	  </span></td>
+      <td width="31%" height="0"><span class=RedText>3</span></td>
+    </tr>
+    <tr> 
+      <td width="69%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+		if ( "human" == "human" )
+		{
+		  document.write( "Nice:" );
+		} 
+		else 
+		{
+		  document.write( "Loyal:" );
+		}
+	  </script>	
+	  </span></td>
+      <td width="31%" height="0"><span class=RedText>5</span></td>
+    </tr>
+  </table>
+</div>
+<div id="Layer13" style="position:absolute; left:543px; top:250px; width:160px; height:152px; z-index:17">
+  <table width="155" border="0" height="48%">
+    <tr> 
+      <td width="66%" height="0"><span class=BlueHeadingText>Skills</span></td>
+      <td width="34%" height="0">&nbsp;</td>
+    </tr>
+    <tr> 
+      <td width="66%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+	    if ( "human" == "human" )
+		{
+		  document.write( "Cooking:" );
+		}
+		else if ( "human" == "dog" )
+		{
+		  document.write( "House Breaking:" );
+		}
+		else if ( "human" == "cat" )
+		{
+		  document.write( "Hunting:" );
+		}
+	  </script>
+	  </span></td>
+      <td width="34%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr> 
+      <td width="66%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+	  if ( "human" == "human" ) 
+	  {
+		document.write( "Mechanical:" );
+	  }
+	  else 
+	  {
+	    document.write( "Tricks:" );
+	  }
+	  </script>
+	  </span></td>
+      <td width="34%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr> 
+      <td width="66%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+	  if ( "human" == "human" ) 
+	  {
+		document.write( "Charisma:" );
+	  }
+	  else 
+	  {
+		document.write( "Obedience:" );
+	  }
+	  </script>
+	  </span></td>
+      <td width="34%" height="0"><span class=RedText>0</span></td>
+    </tr>
+    <tr> 
+      <td width="66%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+	  if ( "human" == "human" )
+	  {
+		document.write( "Body:" );
+	  }
+	  </script>
+	  </span></td>
+      <td width="34%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+	  if ( "human" == "human" )
+	  {
+		document.write( "1" );
+	  }
+	  </script>
+	  </span></td>
+    </tr>
+    <tr> 
+      <td width="66%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+	  if ( "human" == "human" )
+	  {
+		document.write( "Logic:" );
+	  }
+	  </script>
+	  </span></td>
+      <td width="34%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+	  if ( "human" == "human" )
+	  {
+		document.write( "0" );
+	  }
+	  </script>
+	  </span></td>
+    </tr>
+    <tr> 
+      <td width="66%" height="0"><span class=PageText>
+	  <script language="JavaScript">
+	  if ( "human" == "human" )
+	  {
+		document.write( "Creativity:" );
+	  }
+	  </script>
+	  </span></td>
+      <td width="34%" height="0"><span class=RedText>
+	  <script language="JavaScript">
+	  if ( "human" == "human" )
+	  {
+		document.write( "2" );
+	  }
+	  </script>
+	  </span></td>
+    </tr>
+  </table>
+</div>
+
+<div id='Description' style='position:absolute; overflow:hidden; left:160px; top:340px; width:301px; height:250px;'>
+<span class=PageText>Betty is new to the neighborhood.  She is just getting familiar with her new environment.  Can you help her learn how to interact in her new home?</span>
+</div>
+
+<div id="LinksBar" style="position:absolute; left:125px; top:620px; width:571px; height:20px; z-index:40">
+<span class=PageText><center><A HREF='javascript:popwin("http://thesims.com", "TheSims", "")'>TheSims.com</A> | <A HREF=familyhome.html>Family Home Page</A> | 
+<script>
+if (2)
+	document.write("<A HREF=house.html>Family Home</A> | ");
+</script>
+<A HREF=scrapbook1.html>Family Photo Album</A></center></span>
+</div>
+
+</body>
+</html>
