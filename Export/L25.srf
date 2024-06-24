@@ -1,0 +1,19 @@
+[DowntownLot]
+Description=Value. Convenience. Value. Solana Towne Center means value for the whole family. Come on down and join the crowd!
+Floors=1
+Name=Solana Towne Center
+Number=25
+[Filters]
+Lodging=False
+Food=True
+Gardening=False
+Shopping=True
+PetStore=False
+SmallAnimal=True
+Park=False
+Spa=False
+Movie=False
+Model=False
+Music=False
+MagiCo=False
+Rides=False
