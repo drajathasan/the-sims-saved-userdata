@@ -1,8 +1,8 @@
 [ResidentialLot]
-Description=Cheapest house for who have less money
-Floors=1
-Name=Cheap house
-Number=6
+Description=
+Floors=2
+Name=Great House
+Number=9
 [Filters]
 Lodging=False
 Food=False
