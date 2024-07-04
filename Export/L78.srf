@@ -1,0 +1,19 @@
+[ResidentialLot]
+Description=Palacial estate in the heart of the action.
+Floors=2
+Name=The Courtyard Villa
+Number=78
+[Filters]
+Lodging=True
+Food=False
+Gardening=False
+Shopping=False
+PetStore=False
+SmallAnimal=False
+Park=False
+Spa=False
+Movie=False
+Model=False
+Music=False
+MagiCo=False
+Rides=False

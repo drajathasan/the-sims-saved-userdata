@@ -1,0 +1,19 @@
+[ResidentialLot]
+Description=Wide house for big family!
+Floors=2
+Name=Box House
+Number=1
+[Filters]
+Lodging=False
+Food=False
+Gardening=False
+Shopping=False
+PetStore=False
+SmallAnimal=False
+Park=False
+Spa=False
+Movie=False
+Model=False
+Music=False
+MagiCo=False
+Rides=False
