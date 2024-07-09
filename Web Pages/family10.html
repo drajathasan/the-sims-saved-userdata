@@ -1,0 +1,103 @@
+<html>
+<head>
+
+<title>
+</title>
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="en-us">
+
+<LINK REL=StyleSheet HREF='thesims.css' TYPE='text/css'>
+
+<script language='Javascript'>
+<!--
+
+function ShowPage(target, familyid)
+{
+
+	if (document.all)
+        	parent.ShowFamilyPage(target,familyid);
+        if (document.layers)
+	        ShowFamilyPage(target,familyid);
+
+}
+
+function ShowFamilyMembers(url, num, id)
+{
+        var b;
+        var out;
+
+        if (url != "#")
+        {
+	        for (b=1; b <= num; b++)
+	        {
+                        out = "<a href=javascript:ShowPage('" + url + "','" + id + "')>";
+	                out = out + "<img src=" + url + "/FamilyGFX/family" + b + "-face.jpg hspace=4 border=0 align=middle></a>";
+                        document.write(out);
+	        }
+        }
+
+}
+
+//-->
+</script>
+</head>
+
+<body>
+
+
+<script>
+//ShowFamilyMembers("Goth_Sr_77_Sim_Lane", 4, "Goth Sr_12");
+</script>
+
+<table width = 100% height=100% cellspacing=0 cellpadding=2 border=1 bordercolor=#EEEEDD bgcolor=#EEEEDD>
+<tr>
+
+<td width=50% align=left>
+<a href=javascript:ShowPage("Goth_Sr_77_Sim_Lane","Goth_Sr_12")>
+<span class=AddressText>Goth Sr</span></a>
+</td>
+
+<td width=20% align=left>
+<script>
+
+	var lotout;
+
+        if (77 != 0)
+        {
+		lotout = "<span class=AddressText>Number 77 Sim Lane:</span>";
+        }
+        else
+        {
+		lotout = "<span class=AddressText>Unlisted</span>";
+        }
+	document.write(lotout);
+
+</script>
+</td>
+
+<td width=30% align=center>
+<script>
+	
+	var houseout;
+
+        if (77 != 0)
+        {
+		houseout = "<a href=javascript:ShowPage('Goth_Sr_77_Sim_Lane','Goth_Sr_12')>";
+		houseout = houseout + "<img src=Goth_Sr_77_Sim_Lane/FamilyGFX/house-thumb.jpg width=99 height=60 hspace=4 border=0 align=middle></a>";
+        }
+        else
+        {
+		houseout = "&nbsp<SPACER TYPE=BLOCK WIDTH=99 HEIGHT=60 ALIGN-MIDDLE>";
+        }
+	document.write(houseout);
+
+</script>
+</td>
+
+</tr>
+</table>
+
+</body>
+</html>

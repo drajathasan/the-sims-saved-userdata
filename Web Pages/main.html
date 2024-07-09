@@ -1,0 +1,293 @@
+<html>
+<head>
+
+<title>
+Loading...
+</title>
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="en-us">
+
+<LINK REL=StyleSheet HREF='thesims.css' TYPE='text/css'>
+
+<style>
+
+</style>
+
+<script language='Javascript'>
+<!--
+
+var maxFam = 3;
+var currentFam = 1;
+var total = 1;
+
+// preload rollover button images here
+// "on" = mouseover
+// "off" = not mouseover (default image)
+nexton = new Image();
+nexton.src = "NeighborhoodGFX/addressback_next_b.jpg";
+nextoff = new Image();
+nextoff.src = "NeighborhoodGFX/addressback_next_a.jpg";
+prevon = new Image();
+prevon.src = "NeighborhoodGFX/addressback_prev_b.jpg";
+prevoff = new Image();
+prevoff.src = "NeighborhoodGFX/addressback_prev_a.jpg";
+
+function mp_ImgRollOn(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "on.src;");
+        }
+        else if (document.all)
+        {
+	        document[imgName].src = eval(imgName + "on.src");
+        }
+
+}
+
+function mp_ImgRollOff(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "off.src;");
+        }
+        else if (document.all)
+        {
+		document[imgName].src = eval(imgName + "off.src");
+        }
+
+}
+
+function ShowFamilyPage(pagedir, famid)
+{
+        if (pagedir != "#")
+        {
+                nextpage = pagedir + "/familyhome.html";
+
+                // this line changed with new pub tool
+		parent.nav.document.PubInfo.LotName.value = famid;
+		//parent.nav.document.PubInfo.LotName.value = pagedir;
+		parent.nav.showFamily();
+
+			if (document.layers)
+			{
+				window.location = escape(nextpage);
+			}
+			else if (document.all)
+			{
+				window.location = nextpage;
+			}
+        }
+}
+
+function ShowAll()
+{
+
+	maxFam = 12;
+
+	var a;
+        var out;
+
+        var top = 140;
+
+        //for (a=1; a <= 12; a++)
+        for (a=1; a <= maxFam; a++)
+        {
+            if (document.layers)
+	        {
+                        out = "<layer ID=Family" + a + " SRC='family" + a + ".html' left=170px top=" + top + "px width=450px height=70px></layer>";
+	        }
+	        else if (document.all)
+	        {
+                        out = "<IFRAME ID=Family" + a + " FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SCROLLING=NO style='position:absolute;left:170;top:" + top + "; height:70;width:450' SRC='family" + a + ".html'></IFRAME>";
+	        }
+
+                if (a > 12)
+                {
+	                if (document.layers)
+					{
+	                        out = "<layer ID=Family" + a + " SRC='blank.html' left=170px top=" + top + "px width=450px height=70px></layer>";
+					}
+					else if (document.all)
+					{
+	                        out = "<IFRAME ID=Family" + a + " FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SCROLLING=NO style='position:absolute;left:170;top:" + top + "; height:70;width:450' SRC='blank.html'></IFRAME>";
+					}
+                }
+
+		document.write(out);
+                top = top + 90;
+        }
+
+}
+
+
+
+function ShowPrev()
+{
+
+	temp = currentFam - maxFam;
+        if (temp > 0)
+        {
+                currentFam = currentFam - maxFam;
+
+	        for (a= 1; a <= maxFam; a++)
+	        {
+                        temp = currentFam + a - 1;
+	                if (temp > 12)
+	                {
+		                if (document.layers)
+			        {
+		                        eval("document.Family" + a + ".src = 'blank.html';");
+			        }
+			        else if (document.all)
+			        {
+		                        eval("Family" + a + ".location='blank.html';");
+			        }
+                        }
+                        else
+                        {
+		                if (document.layers)
+			        {
+		                        eval("document.Family" + a + ".src = 'family" + temp + ".html';");
+			        }
+			        else if (document.all)
+			        {
+		                        eval("Family" + a + ".location='family" + temp + ".html';");
+			        }
+                        }
+	        }
+
+	}
+
+}
+
+function ShowNext()
+{
+
+	temp = currentFam + maxFam;
+        if (temp <= 12)
+        {
+                currentFam = currentFam + maxFam;
+
+	        for (a= 1; a <= maxFam; a++)
+	        {
+                        temp = currentFam + a - 1;
+	                if (temp > 12)
+	                {
+		                if (document.layers)
+			        {
+		                        eval("document.Family" + a + ".src = 'blank.html';");
+			        }
+			        else if (document.all)
+			        {
+		                        eval("Family" + a + ".location='blank.html';");
+			        }
+                        }
+                        else
+                        {
+		                if (document.layers)
+			        {
+		                        eval("document.Family" + a + ".src = 'family" + temp + ".html';");
+			        }
+			        else if (document.all)
+			        {
+		                        eval("Family" + a + ".location='family" + temp + ".html';");
+			        }
+                        }
+	        }
+
+	}
+
+}
+
+//-->
+</script>
+</head>
+
+<body background = 0xffffff >
+
+<div id="NavBar" style="position:absolute; left:0px; top:0px; width:150px; height:600px; z-index:1">
+<TABLE BORDER=0 WIDTH=125 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><IMG SRC="NeighborhoodGFX/family_b.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></TD></TR>
+	<TR><TD><IMG SRC="NeighborhoodGFX/house_b.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="house"></TD></TR>
+	<TR><TD><IMG SRC="NeighborhoodGFX/photo_b.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></TD></TR>
+</TABLE>
+</div>
+
+<div id='CenterBox' style='position:absolute; left:125px; top:0px; width:571px; height:425px'>
+	<TABLE BORDER=0 WIDTH=571 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD align=center><a href=http://thesims.ea.com/exchange_magictown/ target=_parent><IMG VSPACE=5 HSPACE=0 HEIGHT=60 WIDTH=161 BORDER=0 SRC=NeighborhoodGFX/UL_Exchange_Button_Top.gif ALIGN=center></a></TD></TR>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=54 WIDTH=570 BORDER=0 ALIGN=middle SRC=addressbooktxt.jpg><img src="NeighborhoodGFX/border54.gif" VSPACE=0 HSPACE=0 ALIGN=middle width="1" height="54" border="0"></TD></TR>
+	</TABLE>
+
+	<TABLE BORDER=0 WIDTH=571 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+		<TD BGCOLOR=#EEEEDD><IMG SRC=NeighborhoodGFX/addressside.jpg VSPACE=0 HSPACE=0 HEIGHT=90  WIDTH=1 BORDER=0 ALIGN=left ></TD>
+		<TD BGCOLOR=#EEEEDD WIDTH=570><br></TD>
+		<TD BGCOLOR=#EEEEDD><IMG SRC=NeighborhoodGFX/addressside.jpg VSPACE=0 HSPACE=0 HEIGHT=90  WIDTH=1 BORDER=0 ALIGN=right ></TD>
+		</TR>
+	</TABLE>
+
+	<script>
+		maxFam = 12;
+		var a;
+
+		for (a=1; a <= maxFam; a++)
+		{
+			document.write("<TABLE BORDER=0 WIDTH=571 CELLPADDING=0 CELLSPACING=0>");
+				document.write("<TR><TD><IMG SRC=NeighborhoodGFX/divider.jpg></TD></TR>");
+			document.write("</TABLE>");
+
+			document.write("<TABLE BORDER=0 WIDTH=571 CELLPADDING=0 CELLSPACING=0>");
+				document.write("<TR>");
+					document.write("<TD BGCOLOR=#EEEEDD><IMG SRC=NeighborhoodGFX/addressside.jpg VSPACE=0 HSPACE=0 HEIGHT=90  WIDTH=1 BORDER=0 ALIGN=left ></TD>");
+					document.write("<TD BGCOLOR=#EEEEDD WIDTH=570><br></TD>");
+					document.write("<TD BGCOLOR=#EEEEDD><IMG SRC=NeighborhoodGFX/addressside.jpg VSPACE=0 HSPACE=0 HEIGHT=90  WIDTH=1 BORDER=0 ALIGN=right ></TD>");
+				document.write("</TR>");
+			document.write("</TABLE>");
+		}
+	</script>
+
+
+
+	<TABLE BORDER=0 WIDTH=571 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=10 WIDTH=571 BORDER=0 SRC=NeighborhoodGFX/addressbottom.jpg ALIGN=top></TD></TR>
+		<TR><TD align=center><a href=http://thesims.ea.com/exchange_magictown/ target=_parent><IMG VSPACE=0 HSPACE=0 HEIGHT=76 WIDTH=124 BORDER=0 SRC=NeighborhoodGFX/UL_Exchange_Button.gif ALIGN=center></a></TD></TR>
+	</TABLE>
+
+
+
+</div>
+
+
+<div id="HeadingText" style="position:absolute; left:170px; top:113px; width:450px; height:20px;">
+
+<table width = 450 height=20 cellspacing=0 cellpadding=2>
+<tr>
+
+<td width=50% align=left>
+<span class=BlueHeadingText>Family Name</span>
+</td>
+
+<td width=20% align=left>
+<span class=BlueHeadingText>Address</span>
+</td>
+
+<td width=30% align=center>
+&nbsp
+</td>
+
+</tr></table>
+
+
+</div>
+
+<script>
+ShowAll();
+</script>
+
+</body>
+</html>

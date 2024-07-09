@@ -1,0 +1,509 @@
+<html>
+<head>
+
+<title>The Roomies Family Home Page</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="en-us">
+
+<LINK REL=StyleSheet HREF='thesims.css' TYPE='text/css'>
+
+<style type="text/css">
+<!--
+#NavBar             {position:absolute}
+#NavBarNoHouse       {position:absolute}
+#LinksBar			 {position:absolute}
+
+#HouseThumb             {position:absolute}
+#HouseThumbShadow       {position:absolute}
+#HouseCaption   {position:absolute}
+#HouseCaptionShadow     {position:absolute}
+#SeeHouseLink       {position:absolute}
+#SeeNeighborhoodLink       {position:absolute}
+#HouseIconLayer       {position:absolute}
+#FamilyStats    {position:absolute}
+
+#FamilyMember1       {position:absolute}
+#FamilyMember2       {position:absolute}
+#FamilyMember3       {position:absolute}
+#FamilyMember4       {position:absolute}
+#FamilyMember5       {position:absolute}
+#FamilyMember6       {position:absolute}
+#FamilyMember7       {position:absolute}
+#FamilyMember8       {position:absolute}
+#FamilyMemberShadow1       {position:absolute}
+#FamilyMemberShadow2       {position:absolute}
+#FamilyMemberShadow3       {position:absolute}
+#FamilyMemberShadow4       {position:absolute}
+#FamilyMemberShadow5       {position:absolute}
+#FamilyMemberShadow6       {position:absolute}
+#FamilyMemberShadow7       {position:absolute}
+#FamilyMemberShadow8       {position:absolute}
+-->
+</style></head>
+
+<script language='Javascript'>
+<!--
+
+familyoff = new Image();
+familyoff.src = "family_a.jpg";
+familyon = new Image();
+familyon.src = "family_c.jpg";
+
+houseoff = new Image();
+houseoff.src = "house_a.jpg";
+houseon = new Image();
+houseon.src = "house_c.jpg";
+
+photooff = new Image();
+photooff.src = "photo_a.jpg";
+photoon = new Image();
+photoon.src = "photo_c.jpg";
+
+function popwin(URL, Name, Props)
+{
+	var newwin = open(URL, Name, Props);
+}
+
+function mp_ImgRollOn(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "on.src;");
+        }
+        else if (document.all)
+        {
+	        //document[imgName].src = eval(imgName + "on.src");
+	        eval(layerid + ".all['" + imgName + "'].src = " + imgName + "on.src");
+        }
+
+}
+
+function mp_ImgRollOff(layerid, imgName)
+{
+        if (document.layers)
+        {
+                eval("window.document." + layerid + ".document.images['" + imgName + "'].src = " + imgName + "off.src;");
+        }
+        else if (document.all)
+        {
+		//document[imgName].src = eval(imgName + "off.src");
+	        eval(layerid + ".all['" + imgName + "'].src = " + imgName + "off.src");
+        }
+
+}
+
+function mp_showLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'show';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'visible';");
+        }
+}
+
+function mp_hideLayer(layerid)
+{
+        if (document.layers)
+        {
+                eval("document." + layerid + ".visibility = 'hide';");
+        }
+        else if (document.all)
+        {
+                eval(layerid + ".style.visibility = 'hidden';");
+        }
+
+}
+
+function mp_layerVisible(layerid)
+{
+        var visible;
+
+        if (document.layers)
+        {
+                eval("visible = document." + layerid + ".visibility;");
+        }
+        else if (document.all)
+        {
+                eval("visible = " + layerid + ".style.visibility;");
+        }
+
+        if (visible == "visible")
+                return true;
+        else if (visible == "show")
+                return true;
+        else
+                return false;
+
+}
+
+function ShowNeighborhoodImage()
+{
+	mp_showLayer('HouseIconLayer');
+
+	mp_hideLayer("SeeNeighborhoodLink");
+	mp_showLayer("SeeHouseLink");
+	mp_hideLayer("HouseThumb");
+	//mp_hideLayer("HouseThumbShadow");
+}
+
+function HideNeighborhoodImage()
+{
+	mp_hideLayer("HouseIconLayer");
+
+	mp_hideLayer("SeeHouseLink");
+	mp_showLayer("HouseThumb");
+	//mp_showLayer("HouseThumbShadow");
+	mp_showLayer("SeeNeighborhoodLink");
+}
+
+function ShowFamily()
+{
+        
+	CheckHouse();
+	ShowLinksBar();
+	
+        for (x=1; x <= 2; x++)
+        {
+                eval("mp_showLayer('FamilyMember" + x + "')");
+                eval("mp_showLayer('FamilyMemberShadow" + x + "')");
+        }
+
+
+}
+
+
+function CheckHouse()
+{
+        if (67)
+        {
+                mp_showLayer("NavBar");
+                mp_showLayer("HouseThumb");
+                mp_showLayer("HouseCaption");
+                mp_showLayer("HouseCaptionShadow");
+                mp_showLayer("SeeNeighborhoodLink");
+                mp_showLayer("FamilyStats");
+        }
+	else
+        {
+                mp_showLayer("NavBarNoHouse");
+	        if (document.layers)
+	        {
+	                document.FamilyStats.moveTo(208,86);
+	        }
+	        else if (document.all)
+	        {
+	                FamilyStats.style.top = 86;
+	        }
+                mp_showLayer("FamilyStats");
+        }
+
+}
+
+function ShowLinksBar()
+{
+
+	var	topposition;
+if (2 <= 5)
+{
+	topposition=620;
+}
+if (2 == 6)
+{
+	topposition=720;
+}
+if (2 == 7)
+{
+	topposition=820;
+}
+if (2 == 8)
+{
+	topposition=920;
+}
+
+	        if (document.layers)
+	        {
+	                document.LinksBar.top = topposition;
+	        }
+	        else if (document.all)
+	        {
+	                LinksBar.style.top = topposition;
+	        }
+                mp_showLayer("LinksBar");
+
+}
+
+//-->
+</script>
+</head>
+
+<body onload="ShowFamily()">
+
+<div id="NavBar" style="position:absolute; left:0px; top:0px; width:150px; height:600px; visibility:hidden" visibility="hide">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><IMG SRC="family_c.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></TD></TR>
+	<TR><TD><a href="house.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','house')"
+		onmouseout	= "mp_ImgRollOff('NavBar','house')">
+		<IMG SRC="house_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="house"></a></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+		onmouseover	= "mp_ImgRollOn('NavBar','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBar','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+<div id="NavBarNoHouse" style="position:absolute; left:0px; top:0px; width:150px; height:600px; visibility:hidden" visibility="hide">
+<TABLE BORDER=0 WIDTH=150 CELLPADDING=0 CELLSPACING=0>
+	<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=110  WIDTH=125 BORDER=0 ALIGN=middle SRC=logo.jpg></TD></TR>
+	<TR><TD><IMG SRC="family_c.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="family"></TD></TR>
+	<TR><TD><a href="scrapbook1.html"
+		onmouseover	= "mp_ImgRollOn('NavBarNoHouse','photo')"
+		onmouseout	= "mp_ImgRollOff('NavBarNoHouse','photo')">
+		<IMG SRC="photo_a.jpg" VSPACE=0 HSPACE=0 HEIGHT=77  WIDTH=125 BORDER=0 ALIGN=left NAME="photo"></a></TD></TR>
+</TABLE>
+</div>
+
+<div id='CenterBox' style='position:absolute; left:125px; top:0px; width:571px; height:425px'>
+	<TABLE BORDER=0 WIDTH=365 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=39 WIDTH=364 BORDER=0 ALIGN=middle SRC=familyhomepagetxt.jpg><img src="border39.gif" VSPACE=0 HSPACE=0 ALIGN=middle width="1" height="39" border="0"></TD></TR>
+	</TABLE>
+
+	<TABLE BORDER=0 WIDTH=365 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+			<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=450  WIDTH=1 BORDER=0 ALIGN=left ></TD>
+			<TD BGCOLOR=#EEEEDD WIDTH=365><br></TD>
+			<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=450  WIDTH=1 BORDER=0 ALIGN=right ></TD>
+		</TR>
+	</TABLE>
+	
+	<TABLE BORDER=0 WIDTH=365 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=1 WIDTH=365 BORDER=0 SRC=border.gif ALIGN=top></TD></TR>
+	</TABLE>
+</div>
+
+
+<div id='MembersBox' style='position:absolute; left:510px; top:0px; width:175px; height:425px'>
+	<TABLE BORDER=0 WIDTH=175 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=39 WIDTH=174 BORDER=0 ALIGN=middle SRC=familymemberstxt.jpg><img src="border39.gif" VSPACE=0 HSPACE=0 ALIGN=middle width="1" height="39" border="0"></TD></TR>
+	</TABLE>
+
+	<TABLE BORDER=0 WIDTH=175 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+		<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=50  WIDTH=1 BORDER=0 ALIGN=left ></TD>
+		<TD BGCOLOR=#EEEEDD WIDTH=175><br></TD>
+		<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=50  WIDTH=1 BORDER=0 ALIGN=right ></TD>
+		</TR>
+		<script>
+			var a; 
+			for (a=0; a < 2; a++)
+			{
+				document.write("<TR>");
+					document.write("<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=100  WIDTH=1 BORDER=0 ALIGN=left ></TD>");
+					document.write("<TD BGCOLOR=#EEEEDD WIDTH=175><br></TD>");
+					document.write("<TD BGCOLOR=#EEEEDD><IMG SRC=border.gif VSPACE=0 HSPACE=0 HEIGHT=100  WIDTH=1 BORDER=0 ALIGN=right ></TD>");
+				document.write("</TR>");
+			}
+		</script>
+	</TABLE>
+
+	<TABLE BORDER=0 WIDTH=175 CELLPADDING=0 CELLSPACING=0>
+		<TR><TD><IMG VSPACE=0 HSPACE=0 HEIGHT=1 WIDTH=175 BORDER=0 SRC=border.gif ALIGN=top></TD></TR>
+	</TABLE>
+</div>
+
+<div id='LinksBar' style='position:absolute; left:125px; top:920px; width:571px; height:20px; z-index:40;visibility:hidden; visibility='hide'>
+<span class=PageText><center><A HREF='javascript:popwin("http://thesims.com", "TheSims", "")'>TheSims.com</A> | <A HREF=familyhome.html>Family Home Page</A> | 
+<script>
+if (67)
+	document.write("<A HREF=house.html>Family Home</A> | ");
+</script>
+<A HREF=scrapbook1.html>Family Photo Album</A></center></span>
+</div>
+
+
+<div id="TitleText" style="position:absolute; overflow:hidden; left:125px; top:40px; width:365px; height:20px;">
+<span class=BlueHeadingText><center>Roomies</center></span>
+</div>
+
+<div id="HouseThumb" style="position:absolute; left:150px; top:86px; width:342px; height:220px;visibility:hidden;" visibility='hide'>
+<center>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 class=PhotoBox><TR HEIGHT=5px><TD HEIGHT=5px></TD><TD></TD><TD></TD></TR><TR><TD WIDTH=5px></TD><TD>
+<img src=FamilyGFX/house-thumb.jpg>
+</TD><TD WIDTH=5px></TD></TR><TR HEIGHT=5px><TD HEIGHT=5px></TD><TD></TD><TD></TD></TR>
+<TR HEIGHT=3px class=PhotoBoxShadow><TD HEIGHT=3px class=PhotoBoxShadow></TD><TD class=PhotoBoxShadow></TD><TD class=PhotoBoxShadow></TD></TR></TABLE>
+</center>
+</div>
+
+<div id="HouseCaption" style="position:absolute; left:200px; top:315px; width:254px; height:24px;visibility:hidden;" visibility='hide' class=PhotoCaption>
+<table height=24 width=254 border=0 cellpadding=0 cellspacing=0>
+<tr><td align=center valign=middle>
+<span class=PhotoCaption>Number 67 Sim Lane:</span>
+</td></tr></table></div>
+
+<div id="HouseCaptionShadow" style="position:absolute; left:200px; top:339px; width:254px; height:3px;visibility:hidden;" visibility='hide' class=PhotoBoxShadow>
+<table width=254 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div id="HouseIconLayer" style="position:absolute; left:150px; top:86px; width:342; height:220px;visibility:hidden;" visibility='hide'>
+<center>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 class=PhotoBox><TR HEIGHT=5px><TD HEIGHT=5px></TD><TD></TD><TD></TD></TR><TR><TD WIDTH=5></TD><TD>
+<img src = nh67.jpg>
+</TD><TD WIDTH=5></TD></TR><TR HEIGHT=5px><TD HEIGHT=5px></TD><TD></TD><TD></TD></TR>
+<TR HEIGHT=3px class=PhotoBoxShadow><TD HEIGHT=3px class=PhotoBoxShadow></TD><TD class=PhotoBoxShadow></TD><TD class=PhotoBoxShadow></TD></TR></TABLE>
+</center>
+</div>
+
+
+<div id='SeeHouseLink' style='position:absolute; left:150px; top:348px; width:342; height:19px;visibility:hidden;' visibility='hide'>
+<center><a href=javascript:HideNeighborhoodImage()><span class=PageText>See the house.</span></a></center>
+</div>
+
+<div id='SeeNeighborhoodLink' style='position:absolute; left:150px; top:348px; width:342; height:19px;visibility:hidden;' visibility='hide'>
+<center><a href=javascript:ShowNeighborhoodImage()><span class=PageText>See the neighborhood.</span></a></center>
+</div>
+
+
+<div id="FamilyStats" style="position:absolute; left:208px; top:375px; width:200px; height:96px;visibility:hidden;" visibility='hide'>
+  <table width=200 border="0" height=96>
+    <tr>
+      <td width="80%" height="20"><span class=PageText>Cash Balance:</span></td>
+      <td width="20%" height="20"><span class=RedText>3925</span></td>
+    </tr>
+    <tr>
+      <td width="80%" height="0"><span class=PageText>Days in Existence:</span></td>
+      <td width="20%" height="0"><span class=RedText>14</span></td>
+    </tr>
+    <tr>
+      <td width="80%" height="20"><span class=PageText>Number of Family Members:</span></td>
+      <td width="20%" height="20"><span class=RedText>2</span></td>
+    </tr>
+    <tr>
+      <td width="80%" height="22"><span class=PageText>Number of Family Friends:</span></td>
+      <td width="20%" height="22"><span class=RedText>0</span></td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div id='FamilyMember1' style='position:absolute; left:570px; top:86px; width:55px; height:55px;visibility:hidden;' visibility='hide' class=PhotoBox>
+<table width=55 height=55 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<SPACER TYPE=horizontal size=2>
+<a href=familymember1.html><img src=FamilyGFX/family1_face.jpg width=45 height=45 border=0></a>
+</td></tr></table></div>
+
+<div id='FamilyMemberShadow1' style='position:absolute; left:570px; top:141px; width:55px; height:3px;visibility:hidden;' visibility='hide' class=PhotoBoxShadow>
+<table width=55 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div style='position:absolute; overflow:hidden; left:510px; top:146px; width:175px; height:55px'>
+<a href=familymember1.html><span class=PageText><center>Chris</center></span></a>
+</div>
+
+<div id='FamilyMember2' style='position:absolute; left:570px; top:186px; width:55px; height:55px;visibility:hidden;' visibility='hide' class=PhotoBox>
+<table width=55 height=55 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<SPACER TYPE=horizontal size=2>
+<a href=familymember2.html><img src=FamilyGFX/family2_face.jpg width=45 height=45 border=0></a>
+</td></tr></table></div>
+
+<div id='FamilyMemberShadow2' style='position:absolute; left:570px; top:241px; width:55px; height:3px;visibility:hidden;' visibility='hide' class=PhotoBoxShadow>
+<table width=55 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div style='position:absolute; overflow:hidden; left:510px; top:246px; width:175px; height:55px'>
+<a href=familymember2.html><span class=PageText><center>Melissa</center></span></a>
+</div>
+
+<div id='FamilyMember3' style='position:absolute; left:570px; top:286px; width:55px; height:55px;visibility:hidden;' visibility='hide' class=PhotoBox>
+<table width=55 height=55 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<SPACER TYPE=horizontal size=2>
+<a href=familymember3.html><img src=FamilyGFX/family3_face.jpg width=45 height=45 border=0></a>
+</td></tr></table></div>
+
+<div id='FamilyMemberShadow3' style='position:absolute; left:570px; top:341px; width:55px; height:3px;visibility:hidden;' visibility='hide' class=PhotoBoxShadow>
+<table width=55 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div style='position:absolute; overflow:hidden; left:510px; top:346px; width:175px; height:55px'>
+<a href=familymember3.html><span class=PageText><center></center></span></a>
+</div>
+
+<div id='FamilyMember4' style='position:absolute; left:570px; top:386px; width:55px; height:55px;visibility:hidden;' visibility='hide' class=PhotoBox>
+<table width=55 height=55 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<SPACER TYPE=horizontal size=2>
+<a href=familymember4.html><img src=FamilyGFX/family4_face.jpg width=45 height=45 border=0></a>
+</td></tr></table></div>
+
+<div id='FamilyMemberShadow4' style='position:absolute; left:570px; top:441px; width:55px; height:3px;visibility:hidden;' visibility='hide' class=PhotoBoxShadow>
+<table width=55 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div style='position:absolute; overflow:hidden; left:510px; top:446px; width:175px; height:55px'>
+<a href=familymember4.html><span class=PageText><center></center></span></a>
+</div>
+
+<div id='FamilyMember5' style='position:absolute; left:570px; top:486px; width:55px; height:55px;visibility:hidden;' visibility='hide' class=PhotoBox>
+<table width=55 height=55 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<SPACER TYPE=horizontal size=2>
+<a href=familymember5.html><img src=FamilyGFX/family5_face.jpg width=45 height=45 border=0></a>
+</td></tr></table></div>
+
+<div id='FamilyMemberShadow5' style='position:absolute; left:570px; top:541px; width:55px; height:3px;visibility:hidden;' visibility='hide' class=PhotoBoxShadow>
+<table width=55 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div style='position:absolute; overflow:hidden; left:510px; top:546px; width:175px; height:55px'>
+<a href=familymember5.html><span class=PageText><center></center></span></a>
+</div>
+
+<div id='FamilyMember6' style='position:absolute; left:570px; top:586px; width:55px; height:55px;visibility:hidden;' visibility='hide' class=PhotoBox>
+<table width=55 height=55 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<SPACER TYPE=horizontal size=2>
+<a href=familymember6.html><img src=FamilyGFX/family6_face.jpg width=45 height=45 border=0></a>
+</td></tr></table></div>
+
+<div id='FamilyMemberShadow6' style='position:absolute; left:570px; top:641px; width:55px; height:3px;visibility:hidden;' visibility='hide' class=PhotoBoxShadow>
+<table width=55 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div style='position:absolute; overflow:hidden; left:510px; top:646px; width:175px; height:55px'>
+<a href=familymember6.html><span class=PageText><center></center></span></a>
+</div>
+
+<div id='FamilyMember7' style='position:absolute; left:570px; top:686px; width:55px; height:55px;visibility:hidden;' visibility='hide' class=PhotoBox>
+<table width=55 height=55 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<SPACER TYPE=horizontal size=2>
+<a href=familymember7.html><img src=FamilyGFX/family7_face.jpg width=45 height=45 border=0></a>
+</td></tr></table></div>
+
+<div id='FamilyMemberShadow7' style='position:absolute; left:570px; top:741px; width:55px; height:3px;visibility:hidden;' visibility='hide' class=PhotoBoxShadow>
+<table width=55 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div style='position:absolute; overflow:hidden; left:510px; top:746px; width:175px; height:55px'>
+<a href=familymember7.html><span class=PageText><center></center></span></a>
+</div>
+
+<div id='FamilyMember8' style='position:absolute; left:570px; top:786px; width:55px; height:55px;visibility:hidden;' visibility='hide' class=PhotoBox>
+<table width=55 height=55 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+<SPACER TYPE=horizontal size=2>
+<a href=familymember8.html><img src=FamilyGFX/family8_face.jpg width=45 height=45 border=0></a>
+</td></tr></table></div>
+
+<div id='FamilyMemberShadow8' style='position:absolute; left:570px; top:841px; width:55px; height:3px;visibility:hidden;' visibility='hide' class=PhotoBoxShadow>
+<table width=55 height=3 cellpadding=0 cellspacing=0><tr><td valign=middle align=center>
+</td></tr></table></div>
+
+<div style='position:absolute; overflow:hidden; left:510px; top:846px; width:175px; height:55px'>
+<a href=familymember8.html><span class=PageText><center></center></span></a>
+</div>
+
+</body>
+</html>
+
+
