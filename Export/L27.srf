@@ -1,0 +1,19 @@
+[DowntownLot]
+Description=Come on down to Old Farm Square and feel the magic you missed when it was New!
+Floors=1
+Name=Old Farm Square
+Number=27
+[Filters]
+Lodging=False
+Food=True
+Gardening=False
+Shopping=True
+PetStore=False
+SmallAnimal=False
+Park=False
+Spa=False
+Movie=False
+Model=False
+Music=False
+MagiCo=False
+Rides=False
