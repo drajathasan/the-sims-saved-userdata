@@ -1,0 +1,19 @@
+[ResidentialLot]
+Description=For the Sim who has everything and needs a place to put it.
+Floors=2
+Name=The Porte Rouge Villa
+Number=55
+[Filters]
+Lodging=True
+Food=False
+Gardening=False
+Shopping=False
+PetStore=False
+SmallAnimal=False
+Park=False
+Spa=False
+Movie=False
+Model=False
+Music=False
+MagiCo=False
+Rides=False
